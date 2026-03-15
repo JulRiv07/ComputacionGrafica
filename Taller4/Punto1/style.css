@@ -1,0 +1,118 @@
+/* Fondo con degradado de negro a blanco de arriba hacia abajo */
+body{
+    background: linear-gradient(rgb(16, 16, 16), white);
+}
+
+/* Ocupa toda la pantalla y centra su contenido tanto horizontal como verticalmente */
+.container{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja principal que contiene el registro y el login lado a lado.
+    box-shadow: el primer valor es el desplazamiento horizontal, el segundo el vertical,
+    el tercero el desenfoque, el cuarto la expansión, y por último el color con opacidad.
+    En este caso la sombra es muy sutil, casi solo para dar sensación de elevación */
+.login-container{
+    display: flex;
+    width: 650px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+/* Ambas secciones ocupan el mismo espacio dentro del contenedor */
+.register, .login{
+    flex: 1;
+}
+
+/* position: relative aquí no mueve nada visualmente, pero deja la puerta abierta
+   para que elementos hijos con position: absolute se ubiquen respecto a este div */
+.register{
+    padding: 40px;
+    position: relative;
+}
+
+.register h3{
+    color: #797979;
+    margin-bottom: 30px;
+}
+
+/* Los inputs solo muestran borde inferior para un estilo más minimalista */
+.register input{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid #a8a8a8;
+    color: #333;
+}
+
+/* box-shadow sin desplazamiento (0 0) genera una sombra pareja alrededor del botón,
+   el 3px es el desenfoque, dando un efecto de brillo suave en los bordes */
+.register .submit{
+    width: auto;
+    padding: 10px;
+    background: #120c06;
+    color: #fff;
+    font-size: 12px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+/* La sección login tiene un degradado diagonal de oscuro a azul claro */
+.login{
+    background-image: linear-gradient(to bottom right, #101015, #dce4fd);
+    padding: 40px;
+}
+
+.login h3{
+    color: #fff;
+    margin-bottom: 45px;
+}
+
+/* El icono usa position: absolute para salirse del flujo normal y colocarse
+   exactamente en top: 12px left: 12px dentro del botón. Esto solo funciona
+   porque el botón tiene position: relative, que actúa como punto de referencia */
+.login button i{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+/* position: relative es clave aquí: le dice al ícono hijo con absolute
+   que se posicione dentro de este botón y no respecto a otro elemento */
+.login button{
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+    position: relative;
+}
+
+/* Colores característicos de cada plataforma */
+.login .fb{
+    background: #3b5999;
+    border-style: none;
+    color: #fff;
+}
+
+.login .tw{
+    background: #55acef;
+    border-style: none;
+    color: #fff;
+}
+
+.login .correo{
+    background: #33d4ce;
+    border-style: none;
+    color: #fff;
+}

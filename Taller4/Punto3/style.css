@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Circular', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Tarjeta central con fondo ligeramente más claro que el body */
+.card {
+    background-color: #121212;
+    width: 100%;
+    max-width: 420px;
+    padding: 48px 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+
+.logo {
+    width: 56px;
+    height: 56px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+
+/* Columna de botones sociales */
+.social-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botones de redes sociales: fondo transparente con borde gris */
+.btn-social {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #727272;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: border-color 0.2s;
+}
+
+.btn-social:hover {
+    border-color: #fff;
+}
+
+/* Separador visual entre redes sociales y el formulario.
+   Se usa display:flex para poner las dos líneas <hr> y el texto <span> en fila */
+.divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #727272;
+    font-size: 14px;
+}
+
+/* El <hr> por defecto tiene estilos feos del navegador, aquí se resetean
+   y se define como una línea delgada gris. flex:1 hace que cada hr
+   ocupe el espacio sobrante a los lados del texto */
+.divider hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #333;
+}
+
+/* Formulario ocupa todo el ancho de la card */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    background: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #fff;
+}
+
+/* ::placeholder es un pseudo-elemento que estiliza el texto de placeholder.
+   Por defecto es blanco/gris según el navegador, aquí se oscurece un poco */
+.input-group input::placeholder {
+    color: #a0a0a0;
+}
+
+/* El checkbox de "Recuérdame" va en horizontal */
+.remember label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.forgot {
+    font-size: 13px;
+    color: #fff;
+    text-decoration: underline;
+    align-self: flex-start;
+}
+
+.forgot:hover {
+    color: #1db954;
+}
+
+/* Botón principal verde de Spotify */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: #1db954;
+    border: none;
+    border-radius: 30px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    /* box-shadow sin desplazamiento: crea un resplandor verde alrededor del botón al hacer hover */
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-login:hover {
+    background: #1ed760;
+    box-shadow: 0 0 16px rgba(29, 185, 84, .4);
+}
+
+.register-text {
+    font-size: 14px;
+    color: #a0a0a0;
+    text-align: center;
+}
+
+.register-text a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.register-text a:hover {
+    color: #1db954;
+}
