@@ -4,187 +4,243 @@
     padding: 0;
 }
 
+/* 
+    El div .pagina sa display: flex con
+    justify-content y align-items: center para
+    centrar la tarjeta en toda la pantalla.
+    min-height: 100vh hace que ocupe al menos
+    el 100% de la altura de la ventana.
+ */
 body {
-    background-color: #000;
-    font-family: 'Circular', Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+.pagina {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #fff;
+    padding: 40px 16px;
 }
 
-/* Tarjeta central con fondo ligeramente más claro que el body */
-.card {
-    background-color: #121212;
+/*
+    Ancho fijo de 340px igual que la original.
+    text-align: center centra el logo y el título.
+*/
+.tarjeta {
     width: 100%;
-    max-width: 420px;
-    padding: 48px 40px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    max-width: 340px;
+    text-align: center;
 }
 
-
+/*
+    display: block con margin: auto centra una
+    imagen (las imágenes son inline por defecto
+    y no se centran solo con text-align en todos
+    los casos, aunque aquí sí funcionaría).
+*/
 .logo {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto 16px;
+    /* filter: invert() invierte los colores de la
+        imagen. Como el logo de GitHub es negro,
+       al invertirlo queda blanco sobre fondo oscuro. */
+    filter: invert(1);
 }
 
 h1 {
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-    color: #fff;
-}
-
-/* Columna de botones sociales */
-.social-buttons {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Botones de redes sociales: fondo transparente con borde gris */
-.btn-social {
-    width: 100%;
-    padding: 12px;
-    background: transparent;
-    border: 1px solid #727272;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    transition: border-color 0.2s;
+    color: #e6edf3;
+    margin-bottom: 20px;
 }
 
-.btn-social:hover {
-    border-color: #fff;
-}
-
-/* Separador visual entre redes sociales y el formulario.
-   Se usa display:flex para poner las dos líneas <hr> y el texto <span> en fila */
-.divider {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: #727272;
-    font-size: 14px;
-}
-
-/* El <hr> por defecto tiene estilos feos del navegador, aquí se resetean
-   y se define como una línea delgada gris. flex:1 hace que cada hr
-   ocupe el espacio sobrante a los lados del texto */
-.divider hr {
-    flex: 1;
-    border: none;
-    border-top: 1px solid #333;
-}
-
-/* Formulario ocupa todo el ancho de la card */
+/* 
+    text-align: left para que los labels queden
+    alineados a la izquierda dentro de la tarjeta
+    que estaba centrada.
+*/
 form {
-    width: 100%;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
 }
-
-.input-group {
+ 
+/* 
+    Igual que en los ejercicios anteriores:
+    columna con label arriba e input abajo.
+*/
+.campo {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
-
-.input-group label {
+ 
+.campo label {
     font-size: 13px;
     font-weight: 600;
-    color: #fff;
+    color: #e6edf3;
+    /* display: flex + space-between para poner
+        "Password" a la izquierda y "Forgot password?"
+       a la derecha, dentro del mismo label. */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.input-group input[type="email"],
-.input-group input[type="password"] {
-    width: 100%;
-    padding: 12px 14px;
-    background: #333;
-    border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 15px;
-    color: #fff;
+.campo input {
+    padding: 8px 12px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #e6edf3;
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.input-group input:focus {
-    border-color: #fff;
+.campo input:focus {
+    border-color: #2f81f7;
+    /*  box-shadow con blur crea el resplandor azul
+        que se ve en la imagen cuando el input está activo. 
+    */
+    box-shadow: 0 0 0 3px rgba(47, 129, 247, 0.3);
 }
 
-/* ::placeholder es un pseudo-elemento que estiliza el texto de placeholder.
-   Por defecto es blanco/gris según el navegador, aquí se oscurece un poco */
-.input-group input::placeholder {
-    color: #a0a0a0;
+/* 
+    float no se usa aquí, en cambio se alineó
+    con flexbox en el label padre.
+ */
+.link-olvidaste {
+    color: #2f81f7;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
 }
 
-/* El checkbox de "Recuérdame" va en horizontal */
-.remember label {
+.link-olvidaste:hover {
+    text-decoration: underline;
+}
+
+/*
+    width: 100% lo hace ocupar todo el ancho.
+    input[type="submit"] no hereda font-family
+    del body, por eso se declara explícitamente.
+*/
+.btn-signin {
+    width: 100%;
+    padding: 10px;
+    background-color: #238636;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-signin:hover {
+    background-color: #2ea043;
+}
+
+/* 
+    SEPARADOR "or"
+    display: flex alinea los dos <span> y el <p>
+    en fila. align-items: center los centra vertical.
+    Los <span> vacíos tienen flex: 1 para crecer
+    y ocupar el espacio sobrante a cada lado del "or".
+    La línea se hace con border-top en cada span.
+*/
+.separador {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
+    gap: 10px;
+    margin: 20px 0;
 }
 
-.forgot {
-    font-size: 13px;
-    color: #fff;
-    text-decoration: underline;
-    align-self: flex-start;
+.separador span {
+    flex: 1;
+    border-top: 1px solid #30363d;
 }
 
-.forgot:hover {
-    color: #1db954;
+.separador p {
+    font-size: 12px;
+    color: #8b949e;
 }
 
-/* Botón principal verde de Spotify */
-.btn-login {
+/* 
+    display: flex para poner ícono y texto en fila.
+    width: 100% para que ocupen todo el ancho.
+    background transparent con borde gris oscuro.
+ */
+.btn-tercero {
     width: 100%;
-    padding: 14px;
-    background: #1db954;
-    border: none;
-    border-radius: 30px;
-    color: #000;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    /* box-shadow sin desplazamiento: crea un resplandor verde alrededor del botón al hacer hover */
-    transition: background 0.2s, box-shadow 0.2s;
-}
-
-.btn-login:hover {
-    background: #1ed760;
-    box-shadow: 0 0 16px rgba(29, 185, 84, .4);
-}
-
-.register-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #e6edf3;
     font-size: 14px;
-    color: #a0a0a0;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.2s, border-color 0.2s;
 }
 
-.register-text a {
-    color: #fff;
+.btn-tercero:hover {
+    background-color: #21262d;
+    border-color: #8b949e;
+}
+
+/* Ícono pequeño dentro del botón de Google */
+.icono-btn {
+    width: 18px;
+    height: 18px;
+}
+
+/* Ícono de Apple: el carácter Unicode &#63743; 
+    es el símbolo  de Apple. Se agranda un poco
+    con font-size para que tenga el mismo tamaño
+   visual que el favicon de Google. */
+.icono-apple {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* =============================================
+    PIE DE LA TARJETA
+============================================= */
+.pie {
+    font-size: 13px;
+    color: #8b949e;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.link {
+    color: #2f81f7;
+    text-decoration: none;
+}
+
+.link:hover {
     text-decoration: underline;
 }
 
-.register-text a:hover {
-    color: #1db954;
+/* El link "Sign in with a passkey" es independiente,
+   se muestra como bloque centrado debajo. */
+.passkey {
+    display: block;
+    font-size: 13px;
 }
