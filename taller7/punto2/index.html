@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">      
+    <title>GameZone</title>
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">⚔ GameZone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Géneros</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">RPG</a></li>
+                            <li><a class="dropdown-item" href="#">FPS</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Battle Royale</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar juego..."/>
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+
+        <!-- acordion -->
+        <h6 class="section-title mb-3">Guías de juego</h6>
+        <div class="accordion mb-4" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        ★ Cómo vencer al jefe final
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        El jefe tiene 3 fases. En la primera usa ataques de área, mantente en movimiento. En la segunda invoca minions, elimínalos primero. En la tercera entra en furia: usa pociones de escudo y ataca solo cuando esté aturdido.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        ⚡ Build óptima para PvP — Temporada 12
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        La meta favorece builds de daño crítico con velocidad de ataque alta. Equipa: Espada del Vacío + Anillo de Sombra + Botas de Viento. Distribuye 40% AGI, 30% STR, 30% INT.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        🗺 Localización de todos los cofres ocultos
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Hay 47 cofres ocultos en el mapa. Los más valiosos están en la Cueva del Dragón, las Ruinas del Norte y el Templo Sumergido. Necesitas Visión Arcana nivel 3.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- barras de progreso -->
+        <h6 class="section-title mb-3">Stats del personaje</h6>
+        <div class="mb-4">
+            <div class="progress mb-2">
+                <div class="progress-bar" style="width: 0%"></div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" style="width: 25%">HP 25%</div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" style="width: 50%">MP 50%</div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" style="width: 75%">XP 75%</div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" style="width: 100%">RAGE 100%</div>
+            </div>
+        </div>
+
+        <!--fila de los botones y la card -->
+        <div class="row mb-4 g-4">
+
+            <!-- botones -->
+            <div class="col-12 col-md-6">
+                <h6 class="section-title mb-3">Acciones de combate</h6>
+                <div class="btn-toolbar flex-wrap gap-2" role="toolbar">
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn btn-primary">⚔ Atacar</button>
+                        <button type="button" class="btn btn-primary">🛡 Defender</button>
+                        <button type="button" class="btn btn-primary">✨ Hechizo</button>
+                        <button type="button" class="btn btn-primary">💨 Huir</button>
+                    </div>
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn btn-secondary">🎒 Inventario</button>
+                        <button type="button" class="btn btn-secondary">🗺 Mapa</button>
+                        <button type="button" class="btn btn-secondary">⚙ Config</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info">💎 Tienda</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carta -->
+            <div class="col-12 col-md-6">
+                <h6 class="section-title mb-3">Juego destacado</h6>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=180&fit=crop" class="card-img-top" alt="Gaming">
+                    <div class="card-body">
+                        <h5 class="card-title">Shadow Realm: Origins</h5>
+                        <p class="card-text">RPG de mundo abierto con más de 200 horas de contenido. Explora mazmorras y forja tu leyenda.</p>
+                        <a href="#" class="btn btn-primary">▶ Jugar ahora</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- spinners -->
+        <h6 class="section-title mb-3">Servidores en línea</h6>
+        <div class="d-flex flex-wrap gap-3">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <div class="spinner-border text-secondary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <div class="spinner-border text-danger" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <div class="spinner-border text-warning" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <div class="spinner-border text-info" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <div class="spinner-border text-dark" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>

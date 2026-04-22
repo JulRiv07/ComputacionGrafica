@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Define que el documento está escrito en HTML5 -->
+<html lang="en">
+<!-- Etiqueta principal del documento. lang indica el idioma en que está escrita la página -->
+<head>
+    <!-- Aquí se cargan los recursos y se configuran opciones generales de la página -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estas tres metas se encargan de: definir la codificación de texto,
+        asegurar compatibilidad con Internet Explorer, y hacer la página
+        adaptable a distintos tamaños de pantalla -->
+
+    <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <!-- Se enlaza Font Awesome desde un servidor externo (CDN) para tener acceso a sus iconos.
+        rel="stylesheet" le dice al navegador que es un archivo de estilos.
+        href es la dirección donde está alojado ese archivo.
+        integrity contiene un hash que el navegador compara con el archivo descargado
+        para asegurarse de que nadie lo modificó.
+        crossorigin le indica que puede hacer la petición a otro dominio sin incluir credenciales,
+        esto es necesario para que la verificación del integrity pueda funcionar correctamente.
+        Gracias a esta librería podemos insertar iconos de redes sociales usando solo clases CSS. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Archivo de estilos propio donde se personaliza la apariencia de la página -->
+    <title>Login</title>
+</head>
+<body>
+    <!-- Estructura principal que envuelve toda la interfaz -->
+    <div class="container">
+        <div class="login-container">
+
+            <!-- Bloque del formulario de registro -->
+            <div class="register">
+                <h3>Registro</h3>
+                <form action="">
+                    <!-- Formulario para crear una cuenta nueva.
+                        action indica la URL a la que se mandan los datos al enviarlo,
+                        como está vacío los enviaría a la misma página.
+                        Contiene los campos básicos que necesita un usuario para registrarse. -->
+                    <input type="text" placeholder="Nombre" class="nombre">
+                    <input type="text" placeholder="Correo" class="correo">
+                    <input type="password" placeholder="Contraseña" class="pass">
+                    <input type="password" placeholder="Confirmar Contraseña" class="compass">
+                    <!-- Al hacer clic en este botón se dispara el envío del formulario -->
+                    <input type="submit" class="submit" value="Registrarse">
+                </form>
+            </div>
+
+            <!-- Bloque de opciones para iniciar sesión -->
+            <div class="login">
+                <h3>Iniciar sesión</h3>
+                <div class="login-items">
+                    <!-- Opciones para autenticarse a través de distintas plataformas -->
+                    <button class="fb">
+                        <i class="fab fa-facebook-f"></i>Acceder con facebook
+                    </button>
+                    <button class="tw">
+                        <i class="fab fa-twitter"></i>Acceder con twitter
+                    </button>
+                    <button class="correo">
+                        <i class="fas fa-envelope"></i>Acceder con correo
+                    </button>
+                    <!-- Cada icono se coloca con la etiqueta <i> y las clases que provee Font Awesome -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

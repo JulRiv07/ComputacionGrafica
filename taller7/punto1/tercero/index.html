@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign in to GitHub</title>
+</head>
+<body>
+    <div class="pagina">
+        <div class="tarjeta">
+            <img
+                src="github.png"
+                alt="GitHub logo"
+                class="logo"
+            >
+            <h1>Sign in to GitHub</h1>
+            <form action="#">
+                <div class="campo">
+                    <label for="usuario">Username or email address</label>
+                    <input type="text" id="usuario" placeholder="">
+                </div>
+                <div class="campo">
+                    <label for="password">
+                        Password
+                        <a href="#" class="link-olvidaste">Forgot password?</a>
+                    </label>
+                    <input type="password" id="password" placeholder="">
+                </div>
+                <input type="submit" value="Sign in" class="btn-signin">
+            </form>
+            <div class="separador">
+                <span></span>
+                <p>or</p>
+                <span></span>
+            </div>
+            <button type="button" class="btn-tercero">
+                <img
+                    src="https://www.google.com/favicon.ico"
+                    alt="Google"
+                    class="icono-btn"
+                >
+                Continue with Google
+            </button>
+            <button type="button" class="btn-tercero">
+                <span class="icono-apple">&#63743;</span>
+                Continue with Apple
+            </button>
+            <p class="pie">
+                New to GitHub?
+                <a href="#" class="link">Create an account</a>
+            </p>
+            <a href="#" class="link passkey">Sign in with a passkey</a>
+        </div>
+    </div>
+</body>
+</html>
