@@ -32,10 +32,10 @@ const button = document.getElementById('Graficar');
 button.addEventListener('click' , () => {
     const x = parseFloat(document.getElementById('x').value);
     const y = parseFloat(document.getElementById('y').value);
-    if ( x >= 0 && x <= 167 && y >= 0 && y <= 100 ) {
+    if ( x >= 1 && x <= 166 && y >= 1 && y <= 99 ) {
         drawLine(x, y);
     } else {
-        alert('Valores fuera de rango. X debe estar entre 0 y 167, Y debe estar entre 0 y 100.');
+        alert('Valores fuera de rango. X debe estar entre 1 y 166, Y debe estar entre 1 y 99.');
     }
 });
 
