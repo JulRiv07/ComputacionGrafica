@@ -1,0 +1,146 @@
+body {
+    background-color: #f5f7fb;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    background: rgb(128, 167, 225);
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    border-radius: 20px;
+}
+
+.navbar {
+    background-color: #2d6cdf;
+}
+
+.btn-cita {
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.servicio-card {
+    border-radius: 15px;
+    border: none;
+    transition: 0.3s;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+
+.icono {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono i {
+    font-size: 35px;
+}
+
+.bg-azul {
+    background-color: #e7f0ff;
+    color: #3a86ff;
+}
+
+.bg-verde {
+    background-color: #e6f7ee;
+    color: #28a745;
+}
+
+.bg-rojo {
+    background-color: #fdeaea;
+    color: #dc3545;
+}
+
+.plan-card {
+    border-radius: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.plan-card:hover {
+    transform: scale(1.03);
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan-card ul li {
+    margin: 10px 0;
+}
+
+.precio {
+    color: #2d6cdf;
+}
+
+.precio span {
+    font-size: 14px;
+    color: gray;
+}
+
+.destacado {
+    border: 2px solid #2d6cdf;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.badge-popular {
+    background-color: #2d6cdf;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn-red {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+}
+
+.btn-red:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
